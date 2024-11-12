@@ -1,43 +1,24 @@
-// SWIPER
+// Importar la librería
+const express = require('express');
 
-var swiper = new Swiper(".swiper", {
-    
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    initialSlide: 1,
-    slidesPerView: 3, // Muestra tres imágenes a la vez
-    loop: true, // Activa el bucle para que vuelva a la primera imagen después de la última
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
 
-    breakpoints: {
-        1200: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-        992: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        576: {
-            slidesPerView: 1,
-            spaceBetween: 5,
-        },
-    }
-  });
+// Agrega el puerto
+const PORT = 3000;
+
+
+// Objetos para llamar los métodos de express
+const app = express();
+
+
+// Ruta inicial redirige a index.html
+app.get('/', (req, resp) => {
+    resp.sendFile(__dirname + '/index.html');
+});
+
+
+// Ruta de archivos estáticos
+app.use(express.static('public'));
+
+
+// Escucha conexiones en el puerto 3000 y muestra por consola la dirección web.
+app.listen(PORT, () => console.log(`http://3.234.160.30:${PORT}`));

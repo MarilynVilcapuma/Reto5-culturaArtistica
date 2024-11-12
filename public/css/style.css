@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", serif;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: radial-gradient(
+        at 46.6% 46.9%,
+        hsl(267, 50%, 84%) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 28.5% 71%, hsl(312, 73%, 85%) 0px, transparent 50%),
+      radial-gradient(at 65.9% 75.2%, hsl(146, 68%, 88%) 0px, transparent 50%);
+    
+}
+
+.menu{
+   background-color: rgb(243, 219, 223); 
+   color: #fff;
+   height: 100px;
+}
+
+.menu-logo {
+    max-width: 6rem; /* Aumentar el tamaño original del logo */
+    height: auto;
+    transition: transform 0.3s ease, max-width 0.3s ease; /* Añadir transición para max-width */
+}
+
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px ;
+    height: 100%;
+    margin: 0 auto; /*permite centrar al 90% */  
+}
+
+.menu-links {
+    height: 100%;
+    transition: transform .5s ;
+    display: flex;
+}
+
+.menu-items {
+    list-style: none;
+    position: relative;
+    height: 100%;
+
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu-items:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    --transform: rotate(0);
+}
+.menu-link{
+   color: white; 
+   text-decoration: none;
+   padding: 0 30px;
+   display: flex;
+   height: 100%;
+   align-items: center;
+}
+
+.menu-link:hover{
+    background-color: #bd7ca0;
+}
+
+/* Estilos para la sección hero */
+.hero {
+    background-image: url('https://img.freepik.com/fotos-premium/tiro-medio-mujer-que-trabaja-computadora-portatil_23-2150323510.jpg?semt=ais_hybrid'); /* Cambia 'background-image.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa de color oscuro */
+}
+
+.intro {
+    position: relative;
+    z-index: 1;
+}
+
+.intro h1 {
+    font-size: 3em;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Sección de datos personales */
+section {
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.about h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact{
+    background: #bd7ca0;
+    
+    
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555;
+}
+
+
+
+
